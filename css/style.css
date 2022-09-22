@@ -214,6 +214,10 @@ body {
 /* MEDIA QUERY */
 @media only screen and (max-width:992px) {
 
+  .header {
+    padding-bottom: 68px;
+  }
+
   .header__btn {
     padding: 12px 30px;
   }
@@ -243,12 +247,9 @@ body {
 }
 
 @media only screen and (max-width:767px) {
-  .sitenav {
-    display: none;
-  }
 
-  .sitenav__item:not(:last-child) {
-    margin-right: 10px;
+  .header {
+    padding-bottom: 40px;
   }
 
   .header__btn {
@@ -257,6 +258,13 @@ body {
 
   .header__open-menu-btn {
     display: block;
+  }
+  .sitenav {
+    display: none;
+  }
+
+  .sitenav__item:not(:last-child) {
+    margin-right: 10px;
   }
 
   .text-block__title {
@@ -330,6 +338,11 @@ body {
 }
 
 @media only screen and (max-width:320px) {
+
+  .header {
+    padding-bottom: 29px;
+  }
+
   .hero__img {
     width: 299px;
     height: 299px;
