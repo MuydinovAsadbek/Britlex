@@ -518,6 +518,7 @@ body {
 
   .listening-box {
     padding: 33px 20px;
+    margin-top: 13px;
   }
 
   .listening-box__img {
@@ -635,6 +636,7 @@ body {
   .sitenav-menu__link {
     font-size: 22px;
   }
+
 
   .site-header-open .header-column__btn {
     display: inline-block;
@@ -771,6 +773,98 @@ body {
     min-width: 330px;
     text-align: center;
   }
+
+    /* SECTION-SKILLS */
+    .skills__blocks {
+      flex-direction: column;
+     }
+
+     .skills___title {
+      margin-bottom: 40px;
+      font-size: 30px;
+      line-height: 80px;
+    }
+
+    .speaking-box {
+      width: 100%;
+      padding: 21px 13px;
+      margin-bottom: 21px;
+    }
+
+    .speaking-box__img {
+      width: 214px;
+      height: 214px;
+    }
+
+    .speaking-box__title {
+      font-size: 30px;
+      line-height: 80px;
+    }
+
+    .speaking-box__text:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    .writing-box {
+      width: 100%;
+      min-width: 350px;
+      margin-bottom: 21px;
+    }
+
+    .writing-box__img {
+      width: 204px;
+      height: 204px;
+    }
+
+    .writing-box__title {
+      font-size: 30px;
+      line-height: 80px;
+    }
+
+    .reading-box {
+      width: 100%;
+      min-width: 280px;
+      margin-bottom: 21px;
+    }
+
+    .reading-box__img {
+      width: 236px;
+      height: 157px;
+    }
+
+   .reading-box__title {
+      font-size: 30px;
+      line-height: 80px;
+    }
+
+    .listening-box {
+      flex-direction: column;
+      width: 100%;
+      min-width: 350px;
+      margin-top: 0;
+    }
+
+    .listening-box__img {
+      width: 254px;
+      height: 169px;
+      order: -5;
+    }
+
+    .listening-box__content {
+      order: 5;
+    }
+
+   .lestening-box__title {
+      font-size: 30px;
+      line-height: 80px;
+    }
+
+    .button {
+      width: 100%;
+      min-width: 180px;
+      text-align: center;
+      padding: 15px 50px;
+    }
 }
 
 @media only screen and (max-width:320px) {
@@ -780,11 +874,23 @@ body {
     padding-bottom: 29px;
   }
 
-
-  .header-column__btn {
-    display: inline-block;
+  .site-header-open .header-column {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 26px;
     width: 100%;
-    padding: 17px 100px;
+    height: 100%;
+    background-color: var(--white-color);
+    content: "";
+    z-index: 51;
+  }
+
+  .site-header-open .header-column__btn {
+    width: 100%;
+    min-width: 237px;
+    font-size: 20px;
+    line-height: 25px;
     text-align: center;
   }
 
@@ -879,6 +985,7 @@ body {
     flex-direction: column;
     width: 100%;
     min-width: 280px;
+    margin-top: 0;
   }
 
   .listening-box__img {
@@ -901,4 +1008,5 @@ body {
     width: 100%;
     text-align: center;
   }
+
 }
