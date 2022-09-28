@@ -792,8 +792,8 @@ body {
     }
 
     .speaking-box__img {
-      width: 214px;
-      height: 214px;
+      width: 305px;
+      height: 305px;
     }
 
     .speaking-box__title {
@@ -812,8 +812,8 @@ body {
     }
 
     .writing-box__img {
-      width: 204px;
-      height: 204px;
+      width: 305px;
+      height: 305px;
     }
 
     .writing-box__title {
@@ -828,8 +828,8 @@ body {
     }
 
     .reading-box__img {
-      width: 236px;
-      height: 157px;
+      width: 305px;
+      height: 226px;
     }
 
    .reading-box__title {
@@ -845,8 +845,8 @@ body {
     }
 
     .listening-box__img {
-      width: 254px;
-      height: 169px;
+      width: 305px;
+      height: 180px;
       order: -5;
     }
 
