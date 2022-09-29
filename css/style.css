@@ -255,15 +255,17 @@ body {
 }
 
 .skills__blocks {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-gap: 18px;
+  grid-template-areas: 'speaking-box writing-box reading-box'
+    'speaking-box listening-box listening-box';
 }
 
 .speaking-box {
+  grid-area: speaking-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100%/3 - 18px);
   padding: 35px 22px;
   border-radius: 10px;
   background-color: #f5f5f5;
@@ -280,7 +282,7 @@ body {
   max-width: 347px;
 }
 
-.speaking-box__title {
+.main-box-title {
   margin-top: 0;
   margin-bottom: 5px;
   font-size: 30px;
@@ -297,22 +299,10 @@ body {
   margin-bottom: 40px;
 }
 
-.skills-right-block {
-  display: flex;
-  flex-wrap: wrap;
-  width: calc(100%/(3/2));
-}
-
-.block {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .writing-box {
+  grid-area: writing-box;
   display: flex;
   flex-direction: column;
-  width: calc(50% - 9px);
   padding: 44px 40px;
   border-radius: 10px;
   background-color: #f5f5f5;
@@ -342,9 +332,9 @@ body {
 }
 
 .reading-box {
+  grid-area: reading-box;
   display: flex;
   flex-direction: column;
-  width: calc(50% - 9px);
   padding: 44px 40px;
   border-radius: 10px;
   background-color: #f5f5f5;
@@ -375,11 +365,10 @@ body {
 }
 
 .listening-box {
+  grid-area: listening-box;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   padding: 44px 25px 44px 44px;
-  margin-top: 20px;
   border-radius: 10px;
   background-color: #f5f5f5;
 }
@@ -470,15 +459,13 @@ body {
     height: 460px;
   }
 
-  /* SECTION-SKILLS */
-  .skills___title {
-    margin-bottom: 58px;
-    font-size: 36px;
-    line-height: 80px;
+  /* SIKLLS */
+  .skills__blocks {
+    grid-gap: 13px;
   }
 
-  .speaking-box {
-    width: calc(100%/3 - 13px);
+  .skills___title {
+    margin-bottom: 58px;
   }
 
   .speaking-box__img {
@@ -486,24 +473,9 @@ body {
     height: 260px;
   }
 
-  .speaking-box__title {
-    font-size: 22px;
-    line-height: 80px;
-  }
-
-  .writing-box {
-    width: calc(50% - 6px);
-    padding: 35px 22px;
-  }
-
   .writing-box__img {
     width: 205px;
     height: 205px;
-  }
-
-  .writing-box__title {
-    font-size: 22px;
-    line-height: 80px;
   }
 
   .reading-box__img {
@@ -511,29 +483,13 @@ body {
     height: 162px;
   }
 
- .reading-box__title {
-    font-size: 22px;
-    line-height: 80px;
-  }
-
-  .listening-box {
-    padding: 33px 20px;
-    margin-top: 13px;
-  }
-
   .listening-box__img {
     width: 254px;
     height: 169px;
   }
 
- .lestening-box__title {
+  .main-box-title {
     font-size: 22px;
-    line-height: 80px;
-  }
-
-  .button {
-    white-space: nowrap;
-    min-width: 196px;
   }
 
 }
@@ -637,7 +593,6 @@ body {
     font-size: 22px;
   }
 
-
   .site-header-open .header-column__btn {
     display: inline-block;
     white-space: nowrap;
@@ -651,16 +606,17 @@ body {
     transition: color 0.4s ease, border 0.4s ease;
   }
 
-  /* SECTION-SKILLS */
+  /* SIKLLS */
+  .skills__blocks {
+    grid-gap: 10px;
+  }
+
   .skills___title {
-    margin-bottom: 58px;
-    font-size: 30px;
-    line-height: 80px;
+    margin-bottom: 37px;
   }
 
   .speaking-box {
-    width: calc(100%/3 - 10px);
-    padding: 21px 13px;
+    padding: 10px 10px;
   }
 
   .speaking-box__img {
@@ -668,13 +624,8 @@ body {
     height: 214px;
   }
 
-  .speaking-box__title {
-    font-size: 20px;
-    line-height: 80px;
-  }
-
   .writing-box {
-    padding: 21px 13px;
+    padding: 10px 10px;
   }
 
   .writing-box__img {
@@ -682,13 +633,8 @@ body {
     height: 200px;
   }
 
-  .writing-box__title {
-    font-size: 22px;
-    line-height: 80px;
-  }
-
   .reading-box {
-    padding: 20px 12px;
+    padding: 10px 10px;
   }
 
   .reading-box__img {
@@ -696,29 +642,26 @@ body {
     height: 144px;
   }
 
- .reading-box__title {
-    font-size: 20px;
-    line-height: 80px;
-  }
-
   .listening-box {
-    padding: 21px 13px;
-    margin-top: 10px;
+    padding: 15px 13px 15px 15px;
   }
 
   .listening-box__img {
-    width: 254px;
-    height: 169px;
+    width: 202px;
+    height: 134px;
   }
 
- .lestening-box__title {
-    font-size: 22px;
-    line-height: 80px;
+  .main-box-title {
+    font-size: 20px;
+  }
+
+  .speaking-box__text:not(:last-child) {
+    margin-bottom: 30px;
   }
 
   .button {
-    white-space: nowrap;
-    width: 100%;
+    padding: 13px 42px;
+    text-align: center;
   }
 
 }
@@ -774,98 +717,72 @@ body {
     text-align: center;
   }
 
-    /* SECTION-SKILLS */
-    .skills__blocks {
-      flex-direction: column;
-     }
 
-     .skills___title {
-      margin-bottom: 40px;
-      font-size: 30px;
-      line-height: 80px;
-    }
+  /* SKILS */
+  .skills__blocks {
+    grid-template-areas: 'speaking-box writing-box'
+      'reading-box listening-box';
+  }
 
-    .speaking-box {
-      width: 100%;
-      padding: 21px 13px;
-      margin-bottom: 21px;
-    }
+  .skills___title {
+    margin-bottom: 34px;
+    font-size: 30px;
+    line-height: 80px;
+  }
 
-    .speaking-box__img {
-      width: 305px;
-      height: 305px;
-    }
+  .speaking-box {
+    grid-area: speaking-box;
+  }
 
-    .speaking-box__title {
-      font-size: 30px;
-      line-height: 80px;
-    }
+  .speaking-box__img {
+    width: 185px;
+    height: 185px;
+    margin-bottom: 10px;
+  }
 
-    .speaking-box__text:not(:last-child) {
-      margin-bottom: 25px;
-    }
 
-    .writing-box {
-      width: 100%;
-      min-width: 350px;
-      margin-bottom: 21px;
-    }
+  .writing-box {
+    grid-area: writing-box;
+  }
 
-    .writing-box__img {
-      width: 305px;
-      height: 305px;
-    }
+  .writing-box__img {
+    width: 182px;
+    height: 182px;
+    margin-bottom: 10px;
+  }
 
-    .writing-box__title {
-      font-size: 30px;
-      line-height: 80px;
-    }
+  .writing-box__text {
+    margin-bottom: 173px;
+  }
 
-    .reading-box {
-      width: 100%;
-      min-width: 280px;
-      margin-bottom: 21px;
-    }
+  .reading-box {
+    grid-area: reading-box;
+  }
 
-    .reading-box__img {
-      width: 305px;
-      height: 226px;
-    }
+  .reading-box__img {
+    width: 198px;
+    height: 132px;
+    margin-bottom: 10px;
+  }
 
-   .reading-box__title {
-      font-size: 30px;
-      line-height: 80px;
-    }
 
-    .listening-box {
-      flex-direction: column;
-      width: 100%;
-      min-width: 350px;
-      margin-top: 0;
-    }
+  .listening-box {
+    flex-direction: column;
+  }
 
-    .listening-box__img {
-      width: 305px;
-      height: 180px;
-      order: -5;
-    }
+  .listening-box__img {
+    width: 206px;
+    height: 137px;
+    order: -5;
+    margin-bottom: 15px;
+  }
 
-    .listening-box__content {
-      order: 5;
-    }
+  .main-box-title {
+    line-height: 80px;
+  }
 
-   .lestening-box__title {
-      font-size: 30px;
-      line-height: 80px;
-    }
-
-    .button {
-      width: 100%;
-      min-width: 180px;
-      text-align: center;
-      padding: 15px 50px;
-    }
 }
+
 
 @media only screen and (max-width:320px) {
 
@@ -875,7 +792,7 @@ body {
   }
 
   .site-header-open .header-column {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 26px;
@@ -918,12 +835,16 @@ body {
     line-height: 1.3;
   }
 
-   /* SECTION-SKILLS */
-   .skills__blocks {
-    flex-direction: column;
-   }
+  /* SECTION-SKILLS */
+  .skills__blocks {
+    grid-template-areas:
+            'speaking-box'
+            'writing-box'
+            'reading-box'
+            'listening-box';
+  }
 
-   .skills___title {
+  .skills___title {
     margin-bottom: 40px;
     font-size: 30px;
     line-height: 80px;
@@ -940,13 +861,9 @@ body {
     height: 214px;
   }
 
-  .speaking-box__title {
+  .main-box-title {
     font-size: 18px;
     line-height: 80px;
-  }
-
-  .speaking-box__text:not(:last-child) {
-    margin-bottom: 10px;
   }
 
   .writing-box {
@@ -958,11 +875,16 @@ body {
   .writing-box__img {
     width: 204px;
     height: 204px;
+    margin: auto;
   }
 
   .writing-box__title {
     font-size: 22px;
     line-height: 80px;
+  }
+
+  .writing-box__text {
+    margin-bottom: 25px;
   }
 
   .reading-box {
@@ -976,16 +898,14 @@ body {
     height: 157px;
   }
 
- .reading-box__title {
+  .reading-box__title {
     font-size: 20px;
     line-height: 80px;
   }
 
   .listening-box {
     flex-direction: column;
-    width: 100%;
     min-width: 280px;
-    margin-top: 0;
   }
 
   .listening-box__img {
@@ -998,7 +918,7 @@ body {
     order: 5;
   }
 
- .lestening-box__title {
+  .lestening-box__title {
     font-size: 22px;
     line-height: 80px;
   }
